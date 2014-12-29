@@ -1,0 +1,11 @@
+<template name="home">
+  <div class="topNav">
+    <div class="title">I Can't believe it's not Slack!</div>
+  </div>
+  {{#if currentUser}}
+    {{> chat}}
+  {{else}}
+    {{> loginButtons}}
+    Not Logged In
+  {{/if}}
+</template>

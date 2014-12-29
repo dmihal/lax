@@ -1,0 +1,21 @@
+<template name="chat">
+  <div>
+    <div class="sidebar">
+      {{> channelList}}
+      {{#with currentUser}}
+        {{> userPanel}}
+      {{/with}}
+    </div>
+    <div class="main">
+      {{#if currentChannel}}
+        {{#with currentChannel}}
+          <h2>{{name}}</h2>
+          <div>
+            {{> chatList}}
+          </div>
+          {{> sendForm}}
+        {{/with}}
+      {{/if}}
+    </div>
+  </div>
+</template>
