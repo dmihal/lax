@@ -1,8 +1,15 @@
 <template name="channelList">
   <div>
+    <h3>Channels</h3>
     <ul>
       {{#each channels}}
         {{> channelListItem}}
+      {{/each}}
+    </ul>
+    <h3>Users</h3>
+    <ul>
+      {{#each users}}
+        {{> userListItem}}
       {{/each}}
     </ul>
   </div>
